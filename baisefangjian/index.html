@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="白色房间是一个专注于极简主义设计与美学探索的在线资源库。提供室内设计灵感、白色空间布局方案、极简家居选购指南以及现代室内设计趋势分析。">
+    <meta name="keywords" content="白色房间, 极简主义设计, 现代家居, 室内设计, 留白艺术">
+    <title>白色房间-极简主义设计灵感与空间美学指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #f9f9f9;
+            --text-main: #333333;
+            --text-light: #666666;
+            --accent-color: #e0e0e0;
+            --border-color: #eeeeee;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+        }
+
+        .logo span {
+            color: #999;
+            font-weight: 300;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-light);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-main);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-color: #eef2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="%23d1d5db" fill-opacity="0.4"><path d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z"/></g></svg>');
+            background-size: 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+            color: #1a1a1a;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #555;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--text-main);
+            color: var(--white);
+            border: 1px solid var(--text-main);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--text-main);
+            transform: translateY(-2px);
+        }
+
+        /* 通用 Section */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* 空间案例网格 */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 240px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .card-link {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+
+        .card-link:hover::after {
+            margin-left: 10px;
+        }
+
+        /* 核心原则列表 */
+        .principles {
+            background-color: var(--white);
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .principle-item {
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .principle-item:hover {
+            border-color: #ddd;
+            background-color: #fafafa;
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .principle-item h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .principle-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* 选购指南 */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .guide-item {
+            display: flex;
+            align-items: flex-start;
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .guide-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #f0f0f0;
+            margin-right: 1.5rem;
+            line-height: 1;
+            font-family: sans-serif;
+        }
+
+        .guide-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .guide-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            background-color: var(--white);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 1.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            color: #555;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-light);
+        }
+
+        .faq-answer p {
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1a1a1a;
+            color: #999;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h2 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">白色房间<span>.</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">空间灵感</a></li>
+                    <li><a href="#">设计原则</a></li>
+                    <li><a href="#">色彩搭配</a></li>
+                    <li><a href="#">选购指南</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>回归纯粹，重塑生活空间</h1>
+                <p>探索极简主义设计的魅力。在白色房间中，少即是多，通过光影与留白，寻找内心的宁静与生活的本质。</p>
+                <a href="#gallery" class="btn btn-primary">浏览设计案例</a>
+            </div>
+        </section>
+
+        <!-- 核心原则 -->
+        <section class="container principles">
+            <div class="section-header">
+                <h2 class="section-title">极简设计核心</h2>
+                <span class="section-subtitle">构建白色空间的四大基石</span>
+            </div>
+            <div class="principles-grid">
+                <div class="principle-item">
+                    <div class="icon-box">○</div>
+                    <h3>极致留白</h3>
+                    <p>减少视觉干扰，通过大面积的留白引导视线，让空间呼吸，赋予居住者心理上的自由感。</p>
+                </div>
+                <div class="principle-item">
+                    <div class="icon-box">□</div>
+                    <h3>线条几何</h3>
+                    <p>摒弃繁复的装饰，利用直线条和简单的几何形状构建结构，体现秩序与理性之美。</p>
+                </div>
+                <div class="principle-item">
+                    <div class="icon-box">◎</div>
+                    <h3>光影艺术</h3>
+                    <p>自然光与人工光的巧妙结合，通过材质反射增强空间的通透感，营造层次丰富的氛围。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 空间案例 -->
+        <section id="gallery" class="container">
+            <div class="section-header">
+                <h2 class="section-title">精选空间案例</h2>
+                <span class="section-subtitle">真实落地项目解析</span>
+            </div>
+            <div class="gallery-grid">
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/white1/600/400" alt="极简客厅">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">客厅</span>
+                        <h3 class="card-title">无主灯设计的通透感</h3>
+                        <p class="card-desc">通过嵌入式灯具与高反射墙面，让30平米的小户型拥有大平层的视觉延伸效果。</p>
+                        <a href="#" class="card-link">查看详情</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/white2/600/400" alt="白色卧室">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">卧室</span>
+                        <h3 class="card-title">回归睡眠本质的静谧</h3>
+                        <p class="card-desc">低饱和度的暖白配色，配合原木家具，打造一个助眠且治愈的休憩空间。</p>
+                        <a href="#" class="card-link">查看详情</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/white3/600/400" alt="开放式书房">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">书房</span>
+                        <h3 class="card-title">极简书桌与线条美学</h3>
+                        <p class="card-desc">利用一面整墙的书架与悬浮桌板，构建专注而高效的工作环境。</p>
+                        <a href="#" class="card-link">查看详情</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 选购指南 -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">白色空间选购指南</h2>
+                <span class="section-subtitle">打造完美白房需要准备什么</span>
+            </div>
+            <div class="guide-list">
+                <div class="guide-item">
+                    <div class="guide-number">01</div>
+                    <div class="guide-content">
+                        <h3>选择低饱和度的白色</h3>
+                        <p>避免使用刺眼的纯白（#FFFFFF），建议选择象牙白、暖白或珍珠白。这些颜色在自然光下更柔和，能有效减少视觉疲劳。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-number">02</div>
+                    <div class="guide-content">
+                        <h3>利用材质增加层次</h3>
+                        <p>在纯白背景中，加入大理石、金属、亚麻或原木等不同材质的元素。材质的纹理对比是避免空间显得单调的关键。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-number">03</div>
+                    <div class="guide-content">
+                        <h3>软装色彩点缀</h3>
+                        <p>大面积的白色容易显得冷清，可以通过抱枕、地毯、挂画或绿植引入少量亮色（如克莱因蓝、焦糖色）作为点缀。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="container faq-section">
+            <div class="section-header">
+                <h2 class="section-title">常见问题</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>白色房间容易脏吗？如何维护？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>白色确实更容易显现灰尘和污渍。建议使用浅灰色或米色的沙发套、地毯等软装来增加遮挡。日常清洁时，选择微湿的抹布轻擦，避免水渍残留。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>小户型适合做白色房间吗？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>非常适合。白色具有视觉延伸和反射光线的作用，能有效增加小户型的采光和空间感。配合浅色家具，能让房间看起来更加宽敞。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>白色房间会显得太冷清吗？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>这取决于暖色调的运用。通过木质家具、暖光灯光或织物（如羊毛、棉麻）的加入，可以轻松打破冷清感，营造出温馨舒适的氛围。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>白色房间.</h2>
+                    <p>致力于分享极简主义生活方式与室内设计美学，帮助您打造属于自己的宁静空间。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>探索</h4>
+                    <ul>
+                        <li><a href="#">设计趋势</a></li>
+                        <li><a href="#">色彩搭配</a></li>
+                        <li><a href="#">家具推荐</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源</h4>
+                    <ul>
+                        <li><a href="#">设计软件</a></li>
+                        <li><a href="#">装修日记</a></li>
+                        <li><a href="#">在线咨询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于</h4>
+                    <ul>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 白色房间. All rights reserved. 本站内容仅供设计参考与灵感分享。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 手风琴交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                      </html>
