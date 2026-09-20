@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="红舞鞋公主 - 深入解析经典童话《红舞鞋》的起源、故事情节、文化象征意义及现代改编版本，探讨欲望与牺牲的主题。">
+    <meta name="keywords" content="红舞鞋公主, 童话故事, 凯伦, 汉斯·克里斯蒂安·安徒生, 经典文学, 童话解析">
+    <title>红舞鞋公主 - 经典童话解析与文学解读</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --primary-light: #d2b4de;
+            --secondary-color: #c0392b;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-body: #fdfbf7;
+            --bg-card: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --font-main: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #fdfbf7 0%, #f4ecf7 100%);
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #7d3c98;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4);
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .shoe-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 20px 20px 0px rgba(142, 68, 173, 0.1);
+            object-fit: cover;
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-light);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Story Grid */
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .story-card {
+            background: var(--bg-card);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-top-color: var(--primary-color);
+        }
+
+        .story-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .story-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .story-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Analysis Section */
+        .analysis-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            background: white;
+            padding: 50px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .analysis-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .analysis-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .quote-box {
+            background-color: #f8f4fc;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .analysis-sidebar {
+            background-color: var(--bg-body);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            height: fit-content;
+        }
+
+        .analysis-sidebar h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .tag-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tag-list span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        /* Adaptations */
+        .adaptation-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .adaptation-item {
+            display: flex;
+            gap: 20px;
+            background: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            align-items: center;
+        }
+
+        .adaptation-year {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-light);
+            min-width: 80px;
+        }
+
+        .adaptation-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .adaptation-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .icon-plus {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                padding: 20px 0;
+                gap: 15px;
+                text-align: center;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .analysis-container {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+
+            .adaptation-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>✦</span> 红舞鞋公主
+            </a>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#story" class="active">故事导读</a></li>
+                    <li><a href="#analysis">深度解析</a></li>
+                    <li><a href="#adaptations">影视改编</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>欲望的舞步，<br><span>永不停歇的</span>红舞鞋</h1>
+                    <p>探索汉斯·克里斯蒂安·安徒生笔下最令人心悸的童话之一。一个关于虚荣、悔恨与救赎的永恒寓言，揭示人性深处的渴望与代价。</p>
+                    <a href="#story" class="btn">开始阅读</a>
+                </div>
+                <div class="hero-visual">
+                    <!-- Placeholder for a shoe illustration -->
+                    <img src="https://picsum.photos/seed/redshoe/500/500" alt="红舞鞋插画" class="shoe-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Introduction -->
+        <section id="story" class="container">
+            <div class="section-header">
+                <h2>故事导读</h2>
+                <p>从裁缝之女凯伦到现代的影视重塑，重温这段经典的旅程。</p>
+            </div>
+            <div class="story-grid">
+                <article class="story-card">
+                    <div class="story-icon">👠</div>
+                    <h3>虚荣的诱惑</h3>
+                    <p>故事讲述了贫穷的孤儿凯伦渴望拥有一双红色的丝绒舞鞋。当她终于得到它们时，却发现这双鞋具有某种魔力，一旦穿上，就再也无法脱下，迫使她不停地跳舞直到力竭。</p>
+                </article>
+                <article class="story-card">
+                    <div class="story-icon">⛪</div>
+                    <h3>宗教的挣扎</h3>
+                    <p>凯伦试图通过去教堂忏悔来寻求解脱，但红舞鞋依然控制着她的双腿。她必须在虚荣与信仰之间做出痛苦的抉择，这种内心的拉扯是故事的核心冲突。</p>
+                </article>
+                <article class="story-card">
+                    <div class="story-icon">⚖️</div>
+                    <h3>残酷的结局</h3>
+                    <p>在经历了无尽的痛苦和悔恨后，凯伦在绝望中求助于刽子手。她请求刽子手砍去她的双脚，虽然失去了双腿，但她终于摆脱了红舞鞋的控制，获得了灵魂的平静。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Deep Analysis -->
+        <section id="analysis" class="container">
+            <div class="analysis-container">
+                <div class="analysis-text">
+                    <h3>深度解析：欲望与救赎</h3>
+                    <p>《红舞鞋》并非一个简单的儿童故事，而是一则充满警示意味的成人寓言。安徒生通过这一故事探讨了虚荣心对灵魂的腐蚀，以及信仰在救赎过程中的作用。</p>
+                    <p>凯伦的悲剧始于她对物质的过度渴望和对他人认可的执着。那双红舞鞋象征着无法控制的欲望，一旦陷入其中，人便不再是自己行为的主宰，而是被本能和虚荣所驱使的奴隶。故事中反复出现的“跳舞”意象，隐喻了在追求欲望过程中，人往往身不由己，越陷越深。</p>
+                    <p>值得注意的是，故事的结局并非单纯的悲剧。凯伦虽然失去了双腿，但这恰恰是她重获自由的前提。只有彻底斩断与欲望的联系（物理上和象征意义上），她才能停止那场永无止境的舞步，回归到对上帝和信仰的真正敬畏中。</p>
+                    
+                    <div class="quote-box">
+                        “要跳舞，就要一直跳下去，直到你停下来为止。”
+                    </div>
+                </div>
+                <aside class="analysis-sidebar">
+                    <h4>故事核心主题</h4>
+                    <ul class="tag-list">
+                        <li><span></span>虚荣与物质主义</li>
+                        <li><span></span>悔恨与救赎</li>
+                        <li><span></span>信仰的力量</li>
+                        <li><span></span>人性的弱点</li>
+                        <li><span></span>自由意志的丧失</li>
+                    </ul>
+                    <div style="margin-top: 30px; padding: 15px; background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                        <strong style="color: var(--secondary-color);">创作背景：</strong>
+                        <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">安徒生于1845年发表此篇作品，旨在批判当时社会对物质享受的盲目追求。</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Adaptations -->
+        <section id="adaptations" class="container">
+            <div class="section-header">
+                <h2>影视与文学改编</h2>
+                <p>跨越百年的艺术表达，不同时代对经典故事的独特诠释。</p>
+            </div>
+            <div class="adaptation-list">
+                <div class="adaptation-item">
+                    <div class="adaptation-year">1845</div>
+                    <div class="adaptation-info">
+                        <h4>安徒生原著</h4>
+                        <p>收录于《故事选集》第一卷，这是最原始、最残酷的文学版本，奠定了故事黑暗而深刻的基调。</p>
+                    </div>
+                </div>
+                <div class="adaptation-item">
+                    <div class="adaptation-year">1948</div>
+                    <div class="adaptation-info">
+                        <h4>电影《红舞鞋》</h4>
+                        <p>由迈克尔·鲍威尔执导，这是一部带有强烈心理分析色彩的奇幻电影，色彩运用极具表现力。</p>
+                    </div>
+                </div>
+                <div class="adaptation-item">
+                    <div class="adaptation-year">2016</div>
+                    <div class="adaptation-info">
+                        <h4>动画短片《红舞鞋》</h4>
+                        <p>由加拿大艺术家Gianluca D'Agostino制作，以极简的线条和独特的视角重新演绎了这一经典。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="container">
+            <div class="section-header">
+                <h2>常见问题</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">凯伦最后死了吗？ <span class="icon-plus">+</span></div>
+                    <div class="faq-answer">在安徒生的原著中，刽子手砍下了凯伦的双脚，但她并没有立刻死去。她被送进了修道院，在那里度过了最后几年的忏悔和赎罪生活，最终在睡梦中平静离世。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">为什么鞋子无法脱下？ <span class="icon-plus">+</span></div>
+                    <div class="faq-answer">这是一个隐喻性的设定。红舞鞋象征着无法抗拒的诱惑和欲望。它们“穿在脚上”意味着人的意志被欲望所控制，想要强行脱下（放弃欲望）是非常痛苦和困难的。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">这个故事适合儿童阅读吗？ <span class="icon-plus">+</span></div>
+                    <div class="faq-answer">安徒生的原版故事较为阴暗和沉重，包含惩罚和死亡情节。因此，通常建议家长在指导下阅读，或者选择经过改编的、更适合儿童心理承受能力的版本。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>红舞鞋公主</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">致力于传播经典童话文化，解析文学背后的深层含义，为读者提供有深度的阅读体验。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>栏目导航</h4>
+                    <ul>
+                        <li><a href="#story">故事导读</a></li>
+                        <li><a href="#analysis">深度解析</a></li>
+                        <li><a href="#adaptations">影视改编</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">安徒生全集</a></li>
+                        <li><a href="#">童话改编指南</a></li>
+                        <li><a href="#">文学研究论文</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 红舞鞋公主 - 经典童话解析平台. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('show');
+            });
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
