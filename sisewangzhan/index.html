@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四色网站-色彩心理学、配色方案与设计灵感指南</title>
+    <meta name="description" content="四色网站提供专业的色彩心理学解析、现代配色方案推荐、视觉设计灵感及色彩搭配实操指南，帮助设计师与创作者打造和谐的视觉体验。">
+    <meta name="keywords" content="四色网站,色彩心理学,配色方案,设计灵感,视觉设计,色彩搭配">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-hue: 210;
+            --primary-color: hsl(var(--primary-hue), 80%, 50%);
+            --primary-dark: hsl(var(--primary-hue), 80%, 40%);
+            --secondary-hue: 260;
+            --secondary-color: hsl(var(--secondary-hue), 70%, 60%);
+            --bg-body: #f8f9fa;
+            --bg-card: #ffffff;
+            --text-main: #1a1a1a;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .btn-search {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f0f4ff 0%, #fff0f6 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 0.25rem 0.75rem;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* 核心功能区域 */
+        .features {
+            padding: 3rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* 配色方案展示 */
+        .palettes {
+            padding: 3rem 0;
+            background-color: var(--bg-card);
+        }
+
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .palette-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: #fff;
+            transition: var(--transition);
+        }
+
+        .palette-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .palette-preview {
+            height: 180px;
+            display: flex;
+        }
+
+        .color-swatch {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.9);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        
+        .color-swatch:hover::after {
+            content: '复制';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .palette-info {
+            padding: 1.5rem;
+        }
+
+        .palette-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .palette-info p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* 设计原则 */
+        .principles {
+            padding: 4rem 0;
+        }
+
+        .principle-list {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .principle-item {
+            display: flex;
+            gap: 2rem;
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            align-items: flex-start;
+        }
+
+        .principle-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(0,0,0,0.05);
+            line-height: 1;
+        }
+
+        .principle-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .principle-content p {
+            color: var(--text-secondary);
+        }
+
+        /* 常见问题 */
+        .faq {
+            padding: 4rem 0;
+            background-color: var(--bg-card);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        summary {
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details p {
+            margin-top: 1rem;
+            color: var(--text-secondary);
+            padding-left: 1rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #95a5a6;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* 简化移动端展示 */
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .principle-item {
+                flex-direction: column;
+            }
+
+            .principle-number {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="13.5" cy="6.5" r=".5"></circle>
+                    <circle cx="17.5" cy="10.5" r=".5"></circle>
+                    <circle cx="8.5" cy="7.5" r=".5"></circle>
+                    <circle cx="6.5" cy="12.5" r=".5"></circle>
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                </svg>
+                <span>四色网站</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#features">配色工具</a>
+                <a href="#palettes">灵感库</a>
+                <a href="#principles">设计原则</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <button class="btn-search" aria-label="搜索">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索色彩的无限可能</h1>
+                <p>四色网站致力于提供专业的色彩心理学解析、现代配色方案推荐与视觉设计灵感，助您打造和谐且富有表现力的视觉作品。</p>
+                <div class="hero-tags">
+                    <span class="tag">色彩心理学</span>
+                    <span class="tag">UI 设计</span>
+                    <span class="tag">品牌配色</span>
+                    <span class="tag">网页设计</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心功能 -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心功能与服务</h2>
+                    <p>全方位的色彩解决方案，满足不同场景的设计需求</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2.69l5.74 5.88-5.74 5.88-5.74-5.88z"></path>
+                                <path d="M12 2.69v18.62"></path>
+                            </svg>
+                        </div>
+                        <h3>色彩心理学解析</h3>
+                        <p>深入理解色彩背后的情感含义，根据品牌调性与用户心理选择最合适的色彩组合。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                        </div>
+                        <h3>智能配色生成</h3>
+                        <p>基于 HSL 和 RGB 模型，快速生成和谐、对比度合适的配色方案，支持一键复制 HEX 代码。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3>设计灵感库</h3>
+                        <p>汇集全球优秀的配色案例与行业趋势分析，为您的创意提供源源不断的素材支持。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 配色方案展示 -->
+        <section id="palettes" class="palettes">
+            <div class="container">
+                <div class="section-header">
+                    <h2>热门配色方案推荐</h2>
+                    <p>精选适用于不同场景的配色组合，激发您的创作灵感</p>
+                </div>
+                <div class="palette-grid">
+                    <!-- 方案 1 -->
+                    <article class="palette-card">
+                        <div class="palette-preview">
+                            <div class="color-swatch" style="background-color: #FF6B6B;">#FF6B6B</div>
+                            <div class="color-swatch" style="background-color: #4ECDC4;">#4ECDC4</div>
+                            <div class="color-swatch" style="background-color: #FFE66D;">#FFE66D</div>
+                            <div class="color-swatch" style="background-color: #1A535C;">#1A535C</div>
+                        </div>
+                        <div class="palette-info">
+                            <h3>清新活力</h3>
+                            <p>适合生活方式类、健康类网站，传达积极、充满活力的品牌形象。</p>
+                        </div>
+                    </article>
+
+                    <!-- 方案 2 -->
+                    <article class="palette-card">
+                        <div class="palette-preview">
+                            <div class="color-swatch" style="background-color: #2C3E50;">#2C3E50</div>
+                            <div class="color-swatch" style="background-color: #E74C3C;">#E74C3C</div>
+                            <div class="color-swatch" style="background-color: #ECF0F1;">#ECF0F1</div>
+                            <div class="color-swatch" style="background-color: #34495E;">#34495E</div>
+                        </div>
+                        <div class="palette-info">
+                            <h3>现代商务</h3>
+                            <p>经典的冷暖搭配，适合金融、科技类企业官网，体现专业与稳重。</p>
+                        </div>
+                    </article>
+
+                    <!-- 方案 3 -->
+                    <article class="palette-card">
+                        <div class="palette-preview">
+                            <div class="color-swatch" style="background-color: #6C5CE7;">#6C5CE7</div>
+                            <div class="color-swatch" style="background-color: #A29BFE;">#A29BFE</div>
+                            <div class="color-swatch" style="background-color: #FD79A8;">#FD79A8</div>
+                            <div class="color-swatch" style="background-color: #0984E3;">#0984E3</div>
+                        </div>
+                        <div class="palette-info">
+                            <h3>梦幻霓虹</h3>
+                            <p>高饱和度的渐变色组合，适合游戏、娱乐及年轻化社区的设计。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 设计原则 -->
+        <section id="principles" class="principles">
+            <div class="container">
+                <div class="section-header">
+                    <h2>色彩设计基本原则</h2>
+                    <p>遵循科学的设计规律，确保视觉传达的有效性</p>
+                </div>
+                <div class="principle-list">
+                    <div class="principle-item">
+                        <div class="principle-number">01</div>
+                        <div class="principle-content">
+                            <h3>保持色彩平衡</h3>
+                            <p>在设计界面时，应避免过多的主色调。通常建议使用 60-30-10 原则：60% 的主色调用于背景，30% 的辅助色用于内容区域，10% 的强调色用于按钮和重要提示，以形成视觉重心。</p>
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-number">02</div>
+                        <div class="principle-content">
+                            <h3>确保足够的对比度</h3>
+                            <p>为了满足无障碍访问标准，文字与背景的对比度不应低于 4.5:1。在深色模式下，这一点尤为重要，否则会影响用户的阅读体验和长期视力健康。</p>
+                        </div>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-number">03</div>
+                        <div class="principle-content">
+                            <h3>色彩的一致性</h3>
+                            <p>在跨页面或跨平台的品牌应用中，色彩的定义必须保持一致。使用固定的色值（如 HEX、RGB、CMYK）和色板文件，确保视觉识别系统的统一性。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于色彩搭配与使用的常见疑问</p>
+                </div>
+                <div class="faq-grid">
+                    <details>
+                        <summary>什么是色彩心理学？</summary>
+                        <p>色彩心理学是研究颜色如何影响人类情绪、行为和感知的学科。不同的颜色会唤起不同的情感反应，例如蓝色通常代表信任与冷静，而红色则代表激情或警告。在设计四色网站时，我们利用这些原理来引导用户行为。</p>
+                    </details>
+                    <details>
+                        <summary>如何选择适合我品牌的配色方案？</summary>
+                        <p>首先明确品牌的核心价值和目标受众。如果品牌面向儿童，可选择明亮、活泼的色彩；如果面向高端商务，则建议使用沉稳的深色调。您可以参考行业标杆案例，但最重要的是保持独特性和一致性。</p>
+                    </details>
+                    <details>
+                        <summary>什么是 60-30-10 配色法则？</summary>
+                        <p>这是一个经典的设计配色比例。60% 的颜色用于大面积区域（如背景），30% 用于次要元素（如卡片、分割线），10% 用于强调元素（如按钮、链接）。这种比例能创造出平衡且富有层次感的视觉效果。</p>
+                    </details>
+                    <details>
+                        <summary>如何确保网页的可读性？</summary>
+                        <p>除了遵循 4.5:1 的对比度标准外，还应控制文字的行高和字间距。过小的字号或过密的排版都会降低可读性。建议在移动端和桌面端分别测试字体大小。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于四色网站</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.6;">
+                        我们是一个专注于色彩教育与灵感分享的平台，致力于帮助设计师和创作者利用色彩的力量提升作品质量。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">色彩工具</a></li>
+                        <li><a href="#">灵感案例</a></li>
+                        <li><a href="#">色彩教程</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源下载</h4>
+                    <ul>
+                        <li><a href="#">色卡模板</a></li>
+                        <li><a href="#">配色指南 PDF</a></li>
+                        <li><a href="#">Figma 插件</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 四色网站 版权所有. 本页面仅供设计参考与演示.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
